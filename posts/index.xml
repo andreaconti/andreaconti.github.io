@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Andrea Conti Software Engineer</title>
-        <link>https://andreaconti.github.io/</link>
-        <description>Andrea Conti Software Engineer</description>
+        <title>All Posts - Andrea Conti Software Engineer</title>
+        <link>https://andreaconti.github.io/posts/</link>
+        <description>All Posts | Andrea Conti Software Engineer</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 09 May 2022 16:18:28 &#43;0200</lastBuildDate>
-            <atom:link href="https://andreaconti.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 09 May 2022 16:18:28 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Weighted Linear Regression</title>
     <link>https://andreaconti.github.io/2022/05/weighted-linear-regression/</link>
     <pubDate>Mon, 09 May 2022 16:18:28 &#43;0200</pubDate>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Andrea Conti PhD</title>
+    <link>https://andreaconti.github.io/projects/</link>
+    <description>Recent content in Projects on Andrea Conti PhD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
+    <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster>
+    <lastBuildDate>Wed, 12 Oct 2022 17:32:00 +0200</lastBuildDate><atom:link href="https://andreaconti.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sparsity Agnostic Depth Completion</title>
+      <link>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</link>
+      <pubDate>Wed, 12 Oct 2022 17:32:00 +0200</pubDate>
+      <author>andrea.conti@tutanota.com (Andrea Conti)</author>
+      <guid>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</guid>
+      <description>Work In Progress</description>
+    </item>
+    
+  </channel>
+</rss>

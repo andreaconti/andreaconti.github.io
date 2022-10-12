@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - Andrea Conti Software Engineer</title>
+        <title>Categories - Category - Andrea Conti PhD</title>
         <link>https://andreaconti.github.io/categories/</link>
-        <description>Categories - Category - Andrea Conti Software Engineer</description>
+        <description>Categories - Category - Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
             <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><atom:link href="https://andreaconti.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>

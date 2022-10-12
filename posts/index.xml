@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Andrea Conti Software Engineer</title>
+        <title>All Posts - Andrea Conti PhD</title>
         <link>https://andreaconti.github.io/posts/</link>
-        <description>All Posts | Andrea Conti Software Engineer</description>
+        <description>All Posts | Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
             <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 09 May 2022 16:18:28 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Weighted Linear Regression</title>
-    <link>https://andreaconti.github.io/2022/05/weighted-linear-regression/</link>
+    <link>https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/</link>
     <pubDate>Mon, 09 May 2022 16:18:28 &#43;0200</pubDate>
     <author>Author</author>
-    <guid>https://andreaconti.github.io/2022/05/weighted-linear-regression/</guid>
+    <guid>https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/</guid>
     <description><![CDATA[Weighted Linear Regression Linear Regression If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its weighted form.
 Let&rsquo;s say that you have a set of values $X$ and for each of them a target value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line:]]></description>
 </item></channel>

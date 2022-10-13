@@ -10,6 +10,15 @@
     <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster>
     <lastBuildDate>Wed, 12 Oct 2022 17:32:00 +0200</lastBuildDate><atom:link href="https://andreaconti.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Multi-View Guided Multi-View Stereo</title>
+      <link>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</link>
+      <pubDate>Wed, 12 Oct 2022 17:32:00 +0200</pubDate>
+      <author>andrea.conti@tutanota.com (Andrea Conti)</author>
+      <guid>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</guid>
+      <description>Work In Progress</description>
+    </item>
+    
+    <item>
       <title>Sparsity Agnostic Depth Completion</title>
       <link>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</link>
       <pubDate>Wed, 12 Oct 2022 17:32:00 +0200</pubDate>

@@ -3,6 +3,7 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>https://andreaconti.github.io/</loc><lastmod>2022-10-12T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</loc><lastmod>2022-10-12T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://andreaconti.github.io/projects/</loc><lastmod>2022-10-12T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</loc><lastmod>2022-10-12T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://andreaconti.github.io/posts/</loc><lastmod>2022-05-09T16:18:28&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -10,7 +10,7 @@
     <pubDate>Mon, 09 May 2022 16:18:28 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/</guid>
-    <description><![CDATA[Weighted Linear Regression Linear Regression If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its weighted form.
+    <description><![CDATA[Linear Regression If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its weighted form.
 Let&rsquo;s say that you have a set of values $X$ and for each of them a target value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line:]]></description>
 </item></channel>
 </rss>

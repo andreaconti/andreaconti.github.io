@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Weighted Linear Regression - Andrea Conti PhD</title><meta name="Description" content=""><meta property="og:title" content="Weighted Linear Regression" />
-<meta property="og:description" content="Weighted Linear Regression Linear Regression If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its weighted form.
-Let&rsquo;s say that you have a set of values $X$ and for each of them a target value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line:" />
+        <title>Weighted Linear Regression - Andrea Conti PhD</title><meta name="Description" content="If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&#39;s recap since it will be useful to later introduce its weighted form. Let&#39;s say that you have a set of values $X$ and for each of them a _target_ value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line."><meta property="og:title" content="Weighted Linear Regression" />
+<meta property="og:description" content="If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&#39;s recap since it will be useful to later introduce its weighted form. Let&#39;s say that you have a set of values $X$ and for each of them a _target_ value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-09T16:18:28+02:00" />
@@ -15,8 +14,7 @@ Let&rsquo;s say that you have a set of values $X$ and for each of them a target 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Weighted Linear Regression"/>
-<meta name="twitter:description" content="Weighted Linear Regression Linear Regression If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its weighted form.
-Let&rsquo;s say that you have a set of values $X$ and for each of them a target value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line:"/>
+<meta name="twitter:description" content="If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&#39;s recap since it will be useful to later introduce its weighted form. Let&#39;s say that you have a set of values $X$ and for each of them a _target_ value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line."/>
 <meta name="application-name" content="Andrea Conti PhD">
 <meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,13 +27,13 @@ Let&rsquo;s say that you have a set of values $X$ and for each of them a target 
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/posts\/2022\/05\/weighted-linear-regression\/"
-        },"genre": "posts","wordcount":  781 ,
+        },"genre": "posts","wordcount":  778 ,
         "url": "https:\/\/andreaconti.github.io\/posts\/2022\/05\/weighted-linear-regression\/","datePublished": "2022-05-09T16:18:28+02:00","dateModified": "2022-05-09T16:18:28+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
                 "@type": "Person",
                 "name": "Andrea Conti"
-            },"description": ""
+            },"description": "If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let's recap since it will be useful to later introduce its weighted form. Let's say that you have a set of values $X$ and for each of them a _target_ value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -106,7 +104,7 @@ Let&rsquo;s say that you have a set of values $X$ and for each of them a target 
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Weighted Linear Regression</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-09">2022-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;781 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-09">2022-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;778 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -125,11 +123,10 @@ Let&rsquo;s say that you have a set of values $X$ and for each of them a target 
         <li><a href="#homoscedasticity">Homoscedasticity</a></li>
       </ul>
     </li>
-    <li><a href="#weighted-linear-regression-1">Weighted Linear Regression</a></li>
+    <li><a href="#weighted-linear-regression">Weighted Linear Regression</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="weighted-linear-regression">Weighted Linear Regression</h1>
-<h2 id="linear-regression">Linear Regression</h2>
+            </div><div class="content" id="content"><h2 id="linear-regression">Linear Regression</h2>
 <p>If you are here there are high chances you already know how a simple linear regression works, it is the first and simplest algorithm you meet you your machine learning journey, but let&rsquo;s recap since it will be useful to later introduce its <em>weighted</em> form.</p>
 <p>Let&rsquo;s say that you have a set of values $X$ and for each of them a <em>target</em> value $Y$, if you plot them can be easily seen that they could be approximated by a simple straight line:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -217,7 +214,7 @@ $$\alpha = \hat y - \beta \hat x$$</p>
         data-sizes="auto"
         alt="/posts/2022/05/weighted-linear-regression/index_files/index_10_0.png"
         title="png" /></p>
-<h2 id="weighted-linear-regression-1">Weighted Linear Regression</h2>
+<h2 id="weighted-linear-regression">Weighted Linear Regression</h2>
 <p>We are particularly interested in the Homoscedasticity property since relaxing this linear regression property leads to the capability to handle outliers. We can model each observation to be a random normal variable with its own variance and we want to <em>weight</em> each observation by means of its variance. The problem to be solved becomes thus:</p>
 <p>$$\operatorname{argmin}_{\alpha, \beta} \sum_i \frac{1}{\sigma_i}(y_i - (\alpha + \beta x_i)^2$$</p>
 <p>The closed form to find $\alpha$ and $\beta$ in the weighted case is:</p>

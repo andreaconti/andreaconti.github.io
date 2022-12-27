@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Sparsity Agnostic Depth Completion - Andrea Conti PhD</title><meta name="Description" content=""><meta property="og:title" content="Sparsity Agnostic Depth Completion" />
-<meta property="og:description" content="Work In Progress" />
+        <title>Sparsity Agnostic Depth Completion - Andrea Conti PhD</title><meta name="Description" content="State-of-the-art depth completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors"><meta property="og:title" content="Sparsity Agnostic Depth Completion" />
+<meta property="og:description" content="State-of-the-art depth completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2022-10-12T17:32:00+02:00" />
@@ -14,11 +14,11 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sparsity Agnostic Depth Completion"/>
-<meta name="twitter:description" content="Work In Progress"/>
+<meta name="twitter:description" content="State-of-the-art depth completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors"/>
 <meta name="application-name" content="Andrea Conti PhD">
 <meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/" /><link rel="next" href="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,13 +27,13 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/projects\/sparsity_agnostic_depth_completion\/"
-        },"genre": "projects","wordcount":  3 ,
+        },"genre": "projects","wordcount":  175 ,
         "url": "https:\/\/andreaconti.github.io\/projects\/sparsity_agnostic_depth_completion\/","datePublished": "2022-10-12T17:32:00+02:00","dateModified": "2022-10-12T17:32:00+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
                 "@type": "Person",
                 "name": "Andrea Conti"
-            },"description": ""
+            },"description": "State-of-the-art depth completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors"
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -99,10 +99,148 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">Sparsity Agnostic Depth Completion</h1><div class="content" id="content"><p>Work In Progress</p>
-</div><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#qualitative-results">Qualitative Results</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- raw HTML omitted -->
+
+
+<h1 style="text-align: center;">Sparsity Agnostic Depth Completion</h1>
+<p style="text-align: center;">
+    <a href="https://andreaconti.github.io" target="_blank">Andrea Conti</a>
+    &middot 
+    <a href="https://mattpoggi.github.io" target="_blank">Matteo Poggi</a>
+    &middot
+    <a href="http://www.vision.deis.unibo.it/~smatt/Site/Home.html" target="_blank">Stefano Mattoccia</a>
+</p>
+<p style="text-align: center">
+    <a href="https://arxiv-export1.library.cornell.edu/pdf/2212.00790" target="_blank">[Paper]</a>
+    <a href="https://github.com/andreaconti/sparsity-agnostic-depth-completion" target="_blank">[Code]</a>
+</p>
+
+<!-- add zips with inputs, sparse maps and outputs for -->
+<!-- NYU: 5, 50, 100, 200, 500 -->
+<!-- KITTI: 4, 8, 16, 32, 64 -->
+
+
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="static/teaser.PNG"
+        data-srcset="/projects/sparsity_agnostic_depth_completion/static/teaser.PNG, static/teaser.PNG 1.5x, /projects/sparsity_agnostic_depth_completion/static/teaser.PNG 2x"
+        data-sizes="auto"
+        alt="/projects/sparsity_agnostic_depth_completion/static/teaser.PNG"
+        title="/projects/sparsity_agnostic_depth_completion/static/teaser.PNG" /></p>
+<h2 id="overview">Overview</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="static/network-scheme-deeper.png"
+        data-srcset="/projects/sparsity_agnostic_depth_completion/static/network-scheme-deeper.png, static/network-scheme-deeper.png 1.5x, /projects/sparsity_agnostic_depth_completion/static/network-scheme-deeper.png 2x"
+        data-sizes="auto"
+        alt="/projects/sparsity_agnostic_depth_completion/static/network-scheme-deeper.png"
+        title="/projects/sparsity_agnostic_depth_completion/static/network-scheme-deeper.png" /></p>
+<p>State-of-the-art <strong>Depth Completion</strong> approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:</p>
+<ul>
+<li><strong>robust to uneven distributions</strong> and extremely low densities by structure</li>
+<li><strong>trained</strong> with a <strong>fixed pattern</strong> and density as competitors, without any need of augmenting</li>
+</ul>
+<p>Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.</p>
+<h2 id="qualitative-results">Qualitative Results</h2>
+
+
+<div style="text-align: center;">
+    <p>
+    NYU Depth V2
+    &middot <a href="" target="_blank">5 Points</a>
+    &middot <a href="" target="_blank">50 Points</a>
+    &middot <a href="" target="_blank">100 Points</a>
+    &middot <a href="" target="_blank">200 Points</a>
+    &middot <a href="" target="_blank">500 Points</a>
+    </p>
+
+    <p>
+    KITTI
+    &middot <a href="" target="_blank">4 Lines</a>
+    &middot <a href="" target="_blank">8 Lines</a>
+    &middot <a href="" target="_blank">16 Lines</a>
+    &middot <a href="" target="_blank">32 Lines</a>
+    &middot <a href="" target="_blank">64 Lines</a>
+    </p>
+</div>
+
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="static/gifs/nyu0.gif"
+        data-srcset="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu0.gif, static/gifs/nyu0.gif 1.5x, /projects/sparsity_agnostic_depth_completion/static/gifs/nyu0.gif 2x"
+        data-sizes="auto"
+        alt="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu0.gif"
+        title="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu0.gif" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="static/gifs/nyu50.gif"
+        data-srcset="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu50.gif, static/gifs/nyu50.gif 1.5x, /projects/sparsity_agnostic_depth_completion/static/gifs/nyu50.gif 2x"
+        data-sizes="auto"
+        alt="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu50.gif"
+        title="/projects/sparsity_agnostic_depth_completion/static/gifs/nyu50.gif" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="static/gifs/kitti0.gif"
+        data-srcset="/projects/sparsity_agnostic_depth_completion/static/gifs/kitti0.gif, static/gifs/kitti0.gif 1.5x, /projects/sparsity_agnostic_depth_completion/static/gifs/kitti0.gif 2x"
+        data-sizes="auto"
+        alt="/projects/sparsity_agnostic_depth_completion/static/gifs/kitti0.gif"
+        title="/projects/sparsity_agnostic_depth_completion/static/gifs/kitti0.gif" /></p>
+<h2 id="reference">Reference</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">aconti2023spagnet</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">=</span><span class="s">{Sparsity Agnostic Depth Completion}</span><span class="p">,</span>
+    <span class="na">author</span><span class="p">=</span><span class="s">{Conti, Andrea and Poggi, Matteo and Mattoccia, Stefano}</span><span class="p">,</span>
+    <span class="na">booktitle</span><span class="p">=</span><span class="s">{IEEE/CVF Winter Conference on Applications of Computer Vision}</span><span class="p">,</span>
+    <span class="na">note</span><span class="p">=</span><span class="s">{WACV}</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">=</span><span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-12</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div>
+            </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
         </div>

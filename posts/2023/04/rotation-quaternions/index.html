@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Rotation Quaternions - Andrea Conti PhD</title><meta name="Description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring."><meta property="og:title" content="Rotation Quaternions" />
+<meta property="og:description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://andreaconti.github.io/posts/2023/04/rotation-quaternions/" />
+<meta property="article:published_time" content="2023-04-10T13:11:30+02:00" />
+<meta property="article:modified_time" content="2023-04-10T13:11:30+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rotation Quaternions"/>
+<meta name="twitter:description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring."/>
+<meta name="application-name" content="Andrea Conti PhD">
+<meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/posts/2023/04/rotation-quaternions/" /><link rel="prev" href="https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rotation Quaternions",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/andreaconti.github.io\/posts\/2023\/04\/rotation-quaternions\/"
+        },"genre": "posts","wordcount":  781 ,
+        "url": "https:\/\/andreaconti.github.io\/posts\/2023\/04\/rotation-quaternions\/","datePublished": "2023-04-10T13:11:30+02:00","dateModified": "2023-04-10T13:11:30+02:00","publisher": {
+            "@type": "Organization",
+            "name": "Andrea Conti"},"author": {
+                "@type": "Person",
+                "name": "Andrea Conti"
+            },"description": "A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Andrea Conti PhD">Andrea Conti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Andrea Conti PhD">Andrea Conti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Rotation Quaternions</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-10">2023-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;781 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#quaternions">Quaternions</a>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#addiction-and-multiplication">Addiction and Multiplication</a></li>
+        <li><a href="#complex-conjugate-norm-and-inverse">Complex Conjugate, Norm and Inverse</a></li>
+      </ul>
+    </li>
+    <li><a href="#rotation-quaternions">Rotation Quaternions</a>
+      <ul>
+        <li><a href="#theorem-1">Theorem 1</a></li>
+        <li><a href="#theorem-2">Theorem 2</a></li>
+        <li><a href="#operator-sequences">Operator Sequences</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a <a href="https://en.wikipedia.org/wiki/Noncommutative_ring" target="_blank" rel="noopener noreffer">non-commutative ring</a>.</p>
+<h2 id="quaternions">Quaternions</h2>
+<h3 id="definition">Definition</h3>
+<p>A quaternion $q$ is defined as the sum of a scalar $q_0$ and a vector $\boldsymbol{q} = (q_1,q_2,q_3)$ in the standard orthonormal basis for $\mathbb{R}^3$ $i = (1, 0, 0), \ j = (0, 1, 0), \ k = (0, 0, 1)$. $$ q = q_0 + \boldsymbol{q} = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k} $$</p>
+<h3 id="addiction-and-multiplication">Addiction and Multiplication</h3>
+<p>The addition of two quaternions is just the addition component-wise</p>
+<p>$$q = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k}$$
+$$p = p_0 + p_1\boldsymbol{i} + p_2\boldsymbol{j} + p_3\boldsymbol{k}$$
+$$p + q = (p_0 + q_0) + (p_1 + q_1)\boldsymbol{i} + (p_2 + q_2)\boldsymbol{j} + (p_3 + q_3)\boldsymbol{k}$$</p>
+<p>Moreover, each quaternion has a negative $-q$ that is just the quaternion with components</p>
+<p>$$-q_i, \ i = 0,1,2,3$$</p>
+<p>On the other hand the multiplication of two quaternions is a little bit more involved. The short form of such product is the following one where $p$ and $q$ are the vector parts of the quaternions.</p>
+<p>$$pq = p_0q_0 - p\cdot q + p_0q + q_0p + p \times q$$</p>
+<p>The set of quaternions is closed under multiplication and addition, and multiplication is distributive over addition. The identity quaternion has real part 1 and vector part (0, 0, 0).</p>
+<h4 id="multiplication-example">Multiplication Example</h4>
+<p>Suppose we have the two quaternions</p>
+<p>$$p = 3 + i - 2j + k$$
+$$q = 2 - i + 2j + 3k$$</p>
+<p>We can compute their inner product and <a href="https://en.wikipedia.org/wiki/Cross_product" target="_blank" rel="noopener noreffer">cross product</a> as below:</p>
+<p>$$p \cdot q = - 1 - 4 + 3 = -2$$
+$$p \times q = \begin{bmatrix} i &amp; j &amp; k \\ 1 &amp; -2 &amp; 1 \\ -1 &amp; 2 &amp; 3 \end{bmatrix} = -8i - 4j$$</p>
+<p>The quaternion product is then</p>
+<p>$$pq = (6 + 2) + 3(-i+2j+3k) + 2(i-2j+k) -8i - 4j$$
+$$pq = 8 - 9i -2j + 11k$$</p>
+<h3 id="complex-conjugate-norm-and-inverse">Complex Conjugate, Norm and Inverse</h3>
+<p>The complex conjugate $q^*$ of a quaternion $q$ is defined as the quaternion where the vector part is negated $q^* = q_0 - q = q_0 - q_1i - q_2j - q_3k$. We have the following properties:</p>
+<ul>
+<li>$(q^*)^* = q_0 - (-q) = q$</li>
+<li>$q + q^* = 2q_0$</li>
+<li>$q^<em>q = qq^</em>$</li>
+<li>$(pq)^* = q^*p^*$</li>
+</ul>
+<p>The norm of a quaternion $q$ is the scalar $|q| = \sqrt{q^*q}$. A quaternion is called <!-- raw HTML omitted -->unit quaternion<!-- raw HTML omitted --> if its norm is 1. The norm of the product of two quaternions $p$ and $q$ is the product of the individual norms $|pq|^2 = |p|^2|q|^2$. The inverse of a quaternion $q$ is defined as
+$$q^{-1} = \frac{q^*}{|q|^2} \quad q^{-1}q = qq^{-1} = 1$$
+In the case of a unit quaternion we have $q^{-1} = q^*$.</p>
+<h2 id="rotation-quaternions">Rotation Quaternions</h2>
+<p>Unit Quaternions are a really interesting tool to encode rotations: if we consider a unit quaternion $q = q_0 + \boldsymbol{q}$  we have that $|q|^2 = |q_0^2| + |\boldsymbol{q}^2| = 1$ thus it must exists an angle $\theta$ such that</p>
+<p>$$\cos^2\theta = q_0^2 \quad \sin^2\theta = |q|^2$$</p>
+<p>Indeed, it exists and it is an unique angle $\theta \in [0, \pi]$ . We can thus rewrite the quaternion in terms of such angle $\theta$ and a unit vector $\boldsymbol{u} = \frac{\boldsymbol{q}}{|\boldsymbol{q}|}$
+$$ q = \cos\theta + \boldsymbol{u}\sin\theta $$
+We can observe that any vector $v \in \mathbb{R}^3$ can be regarded as a quaternion with real part equal to zero $$v = 0 + v_1i + v_2j + v_3k $$
+The following theorems hold for unit quaternions.</p>
+<h3 id="theorem-1">Theorem 1</h3>
+<p>For any unit quaternion $q = q_0 + \boldsymbol{q} = \cos\frac{\theta}{2} + \boldsymbol{u}\sin\frac{\theta}{2}$ and for any vector $v \in \mathbb{R}^3$ the action of the operator $$L_q(v) = \boldsymbol{qvq}^*$$ on $v$ is equivalent to a rotation of the vector through an angle $\theta$ about $u$ as the axis of rotation.</p>
+<h3 id="theorem-2">Theorem 2</h3>
+<p>For any quaternion $q = q_0 + \boldsymbol{q} = \cos\frac{\theta}{2} + \boldsymbol{u}\sin\frac{\theta}{2}$ and for any vector $v \in \mathbb{R}^3$ the action of the operator $$L_{q^*} = q^*v(q^*)^* = q^*vq$$ is a rotation of the coordinate frame about the axis $u$ through an angle $\theta$ while $v$ is not rotated. Or equivalently the vector $v$ rotates through an angle $-\theta$ about $u$  with respect to the coordinate frame.</p>
+<h3 id="operator-sequences">Operator Sequences</h3>
+<p>Let $p$ and $q$ be two unit quaternions, so is the product $qp$. If we have a vector $u$ and we want to apply first the rotation $v = L_p(u)$ and then the rotation $w = L_q(v)$ then the composition of such rotations is defined as
+$$
+L_{qp}(u) = (L_q \circ L_p)(u) = (qp)u(qp)^*
+$$</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-10</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2022/05/weighted-linear-regression/" class="prev" rel="prev" title="Weighted Linear Regression"><i class="fas fa-angle-left fa-fw"></i>Weighted Linear Regression</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="https://%3cnil%3e.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":null,"maxResultLength":null,"noResultsFound":"No results found","snippetLength":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

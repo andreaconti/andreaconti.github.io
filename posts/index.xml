@@ -4,7 +4,15 @@
         <link>https://andreaconti.github.io/posts/</link>
         <description>All Posts | Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 09 May 2022 16:18:28 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 10 Apr 2023 13:11:30 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Rotation Quaternions</title>
+    <link>https://andreaconti.github.io/posts/2023/04/rotation-quaternions/</link>
+    <pubDate>Mon, 10 Apr 2023 13:11:30 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/posts/2023/04/rotation-quaternions/</guid>
+    <description><![CDATA[A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring.
+Quaternions Definition A quaternion $q$ is defined as the sum of a scalar $q_0$ and a vector $\boldsymbol{q} = (q_1,q_2,q_3)$ in the standard orthonormal basis for $\mathbb{R}^3$ $i = (1, 0, 0), \ j = (0, 1, 0), \ k = (0, 0, 1)$.]]></description>
+</item><item>
     <title>Weighted Linear Regression</title>
     <link>https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/</link>
     <pubDate>Mon, 09 May 2022 16:18:28 &#43;0200</pubDate>

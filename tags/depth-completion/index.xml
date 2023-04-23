@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All projects - Andrea Conti PhD</title>
-        <link>https://andreaconti.github.io/projects/</link>
-        <description>All projects | Andrea Conti PhD</description>
+        <title>depth-completion - Tag - Andrea Conti PhD</title>
+        <link>https://andreaconti.github.io/tags/depth-completion/</link>
+        <description>depth-completion - Tag - Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Tue, 03 Jan 2023 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/projects/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Tue, 03 Jan 2023 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/depth-completion/" rel="self" type="application/rss+xml" /><item>
     <title>Sparsity Agnostic Depth Completion</title>
     <link>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</link>
     <pubDate>Tue, 03 Jan 2023 17:32:00 &#43;0200</pubDate>
@@ -12,14 +12,5 @@
     <guid>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</guid>
     <description><![CDATA[Sparsity Agnostic Depth Completion Andrea Conti &middot Matteo Poggi &middot Stefano Mattoccia [Paper] [Code] Overview State-of-the-art Depth Completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:
  robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors, without any need of augmenting  Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.]]></description>
-</item><item>
-    <title>Multi-View Guided Multi-View Stereo</title>
-    <link>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</link>
-    <pubDate>Fri, 28 Oct 2022 17:32:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</guid>
-    <description><![CDATA[Multi-View Guided Multi-View Stereo Matteo Poggi* &middot Andrea Conti* &middot Stefano Mattoccia *joint authorship [code] [paper] [demo]   .imggridbox { margin: 5px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    RGB image
-    Dilated sparse depth hints
-    Prediction without hints]]></description>
 </item></channel>
 </rss>

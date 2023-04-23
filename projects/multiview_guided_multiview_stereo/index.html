@@ -5,20 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Multi-View Guided Multi-View Stereo - Andrea Conti PhD</title><meta name="Description" content=""><meta property="og:title" content="Multi-View Guided Multi-View Stereo" />
-<meta property="og:description" content="Work In Progress" />
+        <title>Multi-View Guided Multi-View Stereo - Andrea Conti PhD</title><meta name="Description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below."><meta property="og:title" content="Multi-View Guided Multi-View Stereo" />
+<meta property="og:description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" /><meta property="article:section" content="projects" />
-<meta property="article:published_time" content="2022-10-12T17:32:00+02:00" />
-<meta property="article:modified_time" content="2022-10-12T17:32:00+02:00" />
-
+<meta property="og:url" content="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" />
+<meta property="article:published_time" content="2022-10-28T17:32:00+02:00" />
+<meta property="article:modified_time" content="2022-10-28T17:32:00+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Multi-View Guided Multi-View Stereo"/>
-<meta name="twitter:description" content="Work In Progress"/>
+<meta name="twitter:description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below."/>
 <meta name="application-name" content="Andrea Conti PhD">
 <meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" /><link rel="prev" href="https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" /><link rel="next" href="https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,13 +26,13 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/projects\/multiview_guided_multiview_stereo\/"
-        },"genre": "projects","wordcount":  3 ,
-        "url": "https:\/\/andreaconti.github.io\/projects\/multiview_guided_multiview_stereo\/","datePublished": "2022-10-12T17:32:00+02:00","dateModified": "2022-10-12T17:32:00+02:00","publisher": {
+        },"genre": "projects","keywords": "multi-view-stereo, deep-learning, computer-vision, iros","wordcount":  447 ,
+        "url": "https:\/\/andreaconti.github.io\/projects\/multiview_guided_multiview_stereo\/","datePublished": "2022-10-28T17:32:00+02:00","dateModified": "2022-10-28T17:32:00+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
                 "@type": "Person",
                 "name": "Andrea Conti"
-            },"description": ""
+            },"description": "This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -99,12 +98,344 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">Multi-View Guided Multi-View Stereo</h1><div class="content" id="content"><p>Work In Progress</p>
-</div><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#qualitative-results">Qualitative Results</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- raw HTML omitted -->
+
+
+<h1 style="text-align: center;">Multi-View Guided Multi-View Stereo</h1>
+<p style="text-align: center;">
+    <a href="https://mattpoggi.github.io" target="_blank">Matteo Poggi</a>*
+    &middot 
+    <a href="https://andreaconti.github.io" target="_blank">Andrea Conti</a>*
+    &middot
+    <a href="http://www.vision.deis.unibo.it/~smatt/Site/Home.html" target="_blank">Stefano Mattoccia</a>
+    *joint authorship
+</p>
+<div style="text-align: center;">
+    <a target="blank" href="https://github.com/andreaconti/multi-view-guided-multi-view-stereo">[code]</a>
+    <a target="blank" href="https://arxiv.org/pdf/2210.11467v1.pdf">[paper]</a>
+    <a target="blank" href="https://github.com/andreaconti/multi-view-guided-multi-view-stereo/blob/main/results.ipynb">[demo]</a>
+</div>
+
+
+
+
+<style>
+    .imggridbox {
+       margin: 5px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="imggridbox">
+    <div class="imggrid">
+    <figure>
+    <img src="images/114-rgb.jpg"
+         alt="RGB image" width="600px"/> <figcaption>
+            <p>RGB image</p>
+        </figcaption>
+</figure>
+
+    <figure>
+    <img src="images/114-hints.png"
+         alt="Dilated sparse depth hints" width="600px"/> <figcaption>
+            <p>Dilated sparse depth hints</p>
+        </figcaption>
+</figure>
+
+    <figure>
+    <img src="images/114-d2hc.jpg"
+         alt="Prediction without hints" width="600px"/> <figcaption>
+            <p>Prediction without hints</p>
+        </figcaption>
+</figure>
+
+    <figure>
+    <img src="images/114-d2hc-fmvg.png"
+         alt="Prediction with hints" width="600px"/> <figcaption>
+            <p>Prediction with hints</p>
+        </figcaption>
+</figure>
+
+</div>
+    
+        <div class="caption"><b>Multi-View Guided Multi-View Stereo.</b> Deep MVS network struggle at generalizing from synthetic to real images, yielding inaccurate depth maps and poor 3D reconstruction. By guiding the network with a aset of sparse depth measurements, aggregated over the multiple views, we can greatly ameliorate the results. Sparse depth hints are densified by a 2 x 2 dilation filter to ease visualization.</div>
+    
+</div>
+<h2 id="overview">Overview</h2>
+<p>This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below.</p>
+
+
+
+<style>
+    .imggridbox {
+       margin: 5px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="imggridbox">
+    <div class="imggrid">
+<figure>
+    <img src="images/aggregation_points.png"
+         alt="(a)" width="650px"/> <figcaption>
+            <p>(a)</p>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="images/hints_filtering.png"
+         alt="(b)" width="400px"/> <figcaption>
+            <p>(b)</p>
+        </figcaption>
+</figure>
+
+</div>
+    
+        <div class="caption"><b>Hints filtering and aggregation.</b> Depth hints from many views (left) can be aggregated on the reference image viewpoint by means of pose information.</div>
+    
+</div>
+<p>Given a deep multi-view stereo network, our framework uses such sparse depth hints to guide the neural network by <strong>modulating the plane-sweep cost volume</strong> built during the forward step. Such modulation happens following</p>
+<p>$$
+\mathcal{V}'_s(z_s) = \left[ 1 - v_s + v_s \cdot k \cdot \left( 1 - e^-\frac{z_s - z_s^*}{2c^2} \right) \right]
+$$</p>
+<p>with $v_s$ and $z_s^*$ being respectively the binary mask $v$ and the depth hints map $z^*$ downsampled to resolution $s$ with nearest-neighbor interpolation. For further details we refer to the <a href="https://arxiv.org/pdf/2210.11467v1.pdf" target="_blank" rel="noopener noreffer">main paper</a>.</p>
+<h2 id="qualitative-results">Qualitative Results</h2>
+
+
+
+<style>
+    .imggridbox {
+       margin: 5px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="imggridbox">
+    <div class="imggrid">
+<figure>
+    <img src="images/qualitative_samples_dtu/2_img.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/2_pred_no_hints.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/2_pred_hints.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/2_gt.jpg" width="600px"/> 
+</figure>
+
+</div>
+    
+</div>
+
+
+
+<style>
+    .imggridbox {
+       margin: 5px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="imggridbox">
+    <div class="imggrid">
+<figure>
+    <img src="images/qualitative_samples_dtu/50_img.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/50_pred_no_hints.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/50_pred_hints.jpg" width="600px"/> 
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_dtu/50_gt.jpg" width="600px"/> 
+</figure>
+
+</div>
+    
+</div>
+
+
+
+<style>
+    .imggridbox {
+       margin: 5px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="imggridbox">
+    <div class="imggrid">
+<figure>
+    <img src="images/qualitative_samples_blended/1_img.jpg"
+         alt="RGB" width="600px"/> <figcaption>
+            <p>RGB</p>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_blended/1_pred_no_hints.jpg"
+         alt="w/o Hints" width="600px"/> <figcaption>
+            <p>w/o Hints</p>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_blended/1_pred_hints.jpg"
+         alt="with Hints" width="600px"/> <figcaption>
+            <p>with Hints</p>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="images/qualitative_samples_blended/1_gt.jpg"
+         alt="Ground Truth" width="600px"/> <figcaption>
+            <p>Ground Truth</p>
+        </figcaption>
+</figure>
+
+</div>
+    
+        <div class="caption"><b>Qualitatives.</b> Few qualitative samples of MVSNet trained with and without modulation on Blended-MVS and tested on Blended-MVS and DTU</div>
+    
+</div>
+<h2 id="reference">Reference</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Poggi_2022_IROS</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{Multi-View Guided Multi-View Stereo}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Poggi, Matteo and Conti, Andrea and Mattoccia, Stefano}</span><span class="p">,</span>
+  <span class="na">booktitle</span><span class="p">=</span><span class="s">{IEEE/RSJ International Conference on Intelligent Robots and Systems}</span><span class="p">,</span>
+  <span class="na">note</span><span class="p">=</span><span class="s">{IROS}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2022}</span>
+<span class="p">}</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/multi-view-stereo/">multi-view-stereo</a>,&nbsp;<a href="/tags/deep-learning/">deep-learning</a>,&nbsp;<a href="/tags/computer-vision/">computer-vision</a>,&nbsp;<a href="/tags/iros/">iros</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/projects/sparsity_agnostic_depth_completion/" class="next" rel="next" title="Sparsity Agnostic Depth Completion">Sparsity Agnostic Depth Completion<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div>
+            </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
         </div>
     </footer></div>
 

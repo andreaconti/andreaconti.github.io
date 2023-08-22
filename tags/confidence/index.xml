@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>confidence - Tag - Andrea Conti PhD</title>
+        <link>https://andreaconti.github.io/tags/confidence/</link>
+        <description>confidence - Tag - Andrea Conti PhD</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/confidence/" rel="self" type="application/rss+xml" /><item>
+    <title>Unsupervised Confidence for LiDAR Depth Maps and Applications</title>
+    <link>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</link>
+    <pubDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</guid>
+    <description><![CDATA[Unsupervised Confidence for LiDAR Depth Maps and Applications Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    (a)
+    (b)
+    (c)]]></description>
+</item></channel>
+</rss>

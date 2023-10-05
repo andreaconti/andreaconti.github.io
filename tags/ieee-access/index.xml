@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ieee-access - Tag - Andrea Conti PhD</title>
+        <link>https://andreaconti.github.io/tags/ieee-access/</link>
+        <description>ieee-access - Tag - Andrea Conti PhD</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Fri, 25 Aug 2023 11:44:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/ieee-access/" rel="self" type="application/rss+xml" /><item>
+    <title>Boosting Multi-Modal Unsupervised Domain Adaptation for LiDAR Semantic Segmentation by Self-Supervised Depth Completion</title>
+    <link>https://andreaconti.github.io/projects/boosting_uda_lidar_segmentation/</link>
+    <pubDate>Fri, 25 Aug 2023 11:44:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/projects/boosting_uda_lidar_segmentation/</guid>
+    <description><![CDATA[LiDAR semantic segmentation is receiving increased attention due to its deployment in autonomous driving applications. As LiDARs come often with other sensors such as RGB cameras, multi-modal approaches for this task have been developed, which however suffer from the domain shift problem as other deep learning approaches. To address this, we propose a novel Unsupervised Domain Adaptation (UDA) technique for multi-modal LiDAR segmentation. Unlike previous works in this field, we leverage depth completion as an auxiliary task to align features extracted from 2D images across domains, and as a powerful data augmentation for LiDARs. We validate our method on three popular multi-modal UDA benchmarks and we achieve better performances than other competitors.]]></description>
+</item></channel>
+</rss>

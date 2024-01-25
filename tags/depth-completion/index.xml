@@ -10,7 +10,7 @@
     <pubDate>Tue, 03 Jan 2023 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</guid>
-    <description><![CDATA[Sparsity Agnostic Depth Completion Andrea Conti &middot Matteo Poggi &middot Stefano Mattoccia [Paper] [Code] Overview State-of-the-art Depth Completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:
+    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Stefano Mattoccia [Paper] [Code] Overview State-of-the-art Depth Completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:
  robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors, without any need of augmenting  Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.]]></description>
 </item></channel>
 </rss>

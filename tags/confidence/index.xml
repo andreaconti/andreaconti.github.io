@@ -10,8 +10,10 @@
     <pubDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</guid>
-    <description><![CDATA[Unsupervised Confidence for LiDAR Depth Maps and Applications Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    (a)
+    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    (a)
     (b)
-    (c)]]></description>
+    (c)
+    (d)
+   Unsupervised Confidence for LiDAR Depth Maps and Applications.]]></description>
 </item></channel>
 </rss>

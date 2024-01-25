@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>3dv - Tag - Andrea Conti PhD</title>
+        <link>https://andreaconti.github.io/tags/3dv/</link>
+        <description>3dv - Tag - Andrea Conti PhD</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Tue, 28 Nov 2023 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/3dv/" rel="self" type="application/rss+xml" /><item>
+    <title>Range-Agnostic Multi-View Depth Estimation With Keyframe Selection</title>
+    <link>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</link>
+    <pubDate>Tue, 28 Nov 2023 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</guid>
+    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Valerio Cambareri &middot Stefano Mattoccia [Paper] [Code] [Demo] Overview Multi-View 3D reconstruction techniques process a set of source views and a reference view to yield an estimated depth map for the latter. Unluckily, state-of-the-art frameworks
+ require to know a priori the depth range of the scene, in order to sample a set of depth hypotheses and build a meaningful cost volume. do not take into account the keyframes selection.]]></description>
+</item></channel>
+</rss>

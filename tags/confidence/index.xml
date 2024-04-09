@@ -10,10 +10,10 @@
     <pubDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</guid>
-    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    (a)
-    (b)
-    (c)
-    (d)
-   Unsupervised Confidence for LiDAR Depth Maps and Applications.]]></description>
+    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper] (a)
+(b)
+(c)
+(d)
+Unsupervised Confidence for LiDAR Depth Maps and Applications. Given an image (a) and a LiDAR point cloud (b) the projection of the latter over the image plane does not properly handle occlusions between the two points of view, assigning wrong depth values to the foreground (c). Our method (d) learns to remove these outliers reliably and without supervision.]]></description>
 </item></channel>
 </rss>

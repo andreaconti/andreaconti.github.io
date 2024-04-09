@@ -8,9 +8,10 @@
         <title>Rotation Quaternions - Andrea Conti PhD</title><meta name="Description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring."><meta property="og:title" content="Rotation Quaternions" />
 <meta property="og:description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://andreaconti.github.io/posts/2023/04/rotation-quaternions/" />
+<meta property="og:url" content="https://andreaconti.github.io/posts/2023/04/rotation-quaternions/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-04-10T13:11:30+02:00" />
 <meta property="article:modified_time" content="2023-04-10T13:11:30+02:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rotation Quaternions"/>
 <meta name="twitter:description" content="A quaternion is a 4-tuple with which is possible to obtain a concise and efficient representation of a rotation. The set of quaternions together with the two operations of addition and multiplication form a non-commutative ring."/>
@@ -26,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/posts\/2023\/04\/rotation-quaternions\/"
-        },"genre": "posts","wordcount":  781 ,
+        },"genre": "posts","wordcount":  782 ,
         "url": "https:\/\/andreaconti.github.io\/posts\/2023\/04\/rotation-quaternions\/","datePublished": "2023-04-10T13:11:30+02:00","dateModified": "2023-04-10T13:11:30+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
@@ -103,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Rotation Quaternions</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-10">2023-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;781 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-10">2023-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;782 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -155,14 +156,14 @@ $$pq = 8 - 9i -2j + 11k$$</p>
 <h3 id="complex-conjugate-norm-and-inverse">Complex Conjugate, Norm and Inverse</h3>
 <p>The complex conjugate $q^*$ of a quaternion $q$ is defined as the quaternion where the vector part is negated $q^* = q_0 - q = q_0 - q_1i - q_2j - q_3k$. We have the following properties:</p>
 <ul>
-<li>$(q^*)^* = q_0 - (-q) = q$</li>
+<li>$(q^<em>)^</em> = q_0 - (-q) = q$</li>
 <li>$q + q^* = 2q_0$</li>
 <li>$q^<em>q = qq^</em>$</li>
-<li>$(pq)^* = q^*p^*$</li>
+<li>$(pq)^* = q^<em>p^</em>$</li>
 </ul>
 <p>The norm of a quaternion $q$ is the scalar $|q| = \sqrt{q^*q}$. A quaternion is called <!-- raw HTML omitted -->unit quaternion<!-- raw HTML omitted --> if its norm is 1. The norm of the product of two quaternions $p$ and $q$ is the product of the individual norms $|pq|^2 = |p|^2|q|^2$. The inverse of a quaternion $q$ is defined as
-$$q^{-1} = \frac{q^*}{|q|^2} \quad q^{-1}q = qq^{-1} = 1$$
-In the case of a unit quaternion we have $q^{-1} = q^*$.</p>
+$$q^{-1} = \frac{q^<em>}{|q|^2} \quad q^{-1}q = qq^{-1} = 1$$
+In the case of a unit quaternion we have $q^{-1} = q^</em>$.</p>
 <h2 id="rotation-quaternions">Rotation Quaternions</h2>
 <p>Unit Quaternions are a really interesting tool to encode rotations: if we consider a unit quaternion $q = q_0 + \boldsymbol{q}$  we have that $|q|^2 = |q_0^2| + |\boldsymbol{q}^2| = 1$ thus it must exists an angle $\theta$ such that</p>
 <p>$$\cos^2\theta = q_0^2 \quad \sin^2\theta = |q|^2$$</p>
@@ -173,7 +174,7 @@ The following theorems hold for unit quaternions.</p>
 <h3 id="theorem-1">Theorem 1</h3>
 <p>For any unit quaternion $q = q_0 + \boldsymbol{q} = \cos\frac{\theta}{2} + \boldsymbol{u}\sin\frac{\theta}{2}$ and for any vector $v \in \mathbb{R}^3$ the action of the operator $$L_q(v) = \boldsymbol{qvq}^*$$ on $v$ is equivalent to a rotation of the vector through an angle $\theta$ about $u$ as the axis of rotation.</p>
 <h3 id="theorem-2">Theorem 2</h3>
-<p>For any quaternion $q = q_0 + \boldsymbol{q} = \cos\frac{\theta}{2} + \boldsymbol{u}\sin\frac{\theta}{2}$ and for any vector $v \in \mathbb{R}^3$ the action of the operator $$L_{q^*} = q^*v(q^*)^* = q^*vq$$ is a rotation of the coordinate frame about the axis $u$ through an angle $\theta$ while $v$ is not rotated. Or equivalently the vector $v$ rotates through an angle $-\theta$ about $u$  with respect to the coordinate frame.</p>
+<p>For any quaternion $q = q_0 + \boldsymbol{q} = \cos\frac{\theta}{2} + \boldsymbol{u}\sin\frac{\theta}{2}$ and for any vector $v \in \mathbb{R}^3$ the action of the operator $$L_{q^<em>} = q^<em>v(q^</em>)^</em> = q^*vq$$ is a rotation of the coordinate frame about the axis $u$ through an angle $\theta$ while $v$ is not rotated. Or equivalently the vector $v$ rotates through an angle $-\theta$ about $u$  with respect to the coordinate frame.</p>
 <h3 id="operator-sequences">Operator Sequences</h3>
 <p>Let $p$ and $q$ be two unit quaternions, so is the product $qp$. If we have a vector $u$ and we want to apply first the rotation $v = L_p(u)$ and then the rotation $w = L_q(v)$ then the composition of such rotations is defined as
 $$

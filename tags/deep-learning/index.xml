@@ -11,7 +11,7 @@
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</guid>
     <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Valerio Cambareri &middot Stefano Mattoccia [Paper] [Code] [Demo] Overview Multi-View 3D reconstruction techniques process a set of source views and a reference view to yield an estimated depth map for the latter. Unluckily, state-of-the-art frameworks
- require to know a priori the depth range of the scene, in order to sample a set of depth hypotheses and build a meaningful cost volume. do not take into account the keyframes selection.]]></description>
+require to know a priori the depth range of the scene, in order to sample a set of depth hypotheses and build a meaningful cost volume. do not take into account the keyframes selection.]]></description>
 </item><item>
     <title>Active Stereo Without Pattern Projector</title>
     <link>https://andreaconti.github.io/projects/active_stereo_without_pattern_projector/</link>
@@ -33,17 +33,17 @@
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/sparsity_agnostic_depth_completion/</guid>
     <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Stefano Mattoccia [Paper] [Code] Overview State-of-the-art Depth Completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:
- robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors, without any need of augmenting  Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.]]></description>
+robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors, without any need of augmenting Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.]]></description>
 </item><item>
     <title>Unsupervised Confidence for LiDAR Depth Maps and Applications</title>
     <link>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</link>
     <pubDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</guid>
-    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    (a)
-    (b)
-    (c)
-    (d)
-   Unsupervised Confidence for LiDAR Depth Maps and Applications.]]></description>
+    <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Filippo Aleotti &middot Stefano Mattoccia [code] [demo] [paper] (a)
+(b)
+(c)
+(d)
+Unsupervised Confidence for LiDAR Depth Maps and Applications. Given an image (a) and a LiDAR point cloud (b) the projection of the latter over the image plane does not properly handle occlusions between the two points of view, assigning wrong depth values to the foreground (c). Our method (d) learns to remove these outliers reliably and without supervision.]]></description>
 </item></channel>
 </rss>

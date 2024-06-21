@@ -2,15 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://andreaconti.github.io/tags/3dv/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/computer-vision/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/deep-learning/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/depth-completion/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/multi-view/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/projects/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/</loc><lastmod>2023-11-28T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/3dv/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/computer-vision/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/deep-learning/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/depth-completion/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/multi-view/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/revisiting_depth_completion_from_stereo_matching/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/projects/active_stereo_without_pattern_projector/</loc><lastmod>2023-09-27T11:44:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/tags/iccv/</loc><lastmod>2023-09-27T11:44:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/projects/boosting_uda_lidar_segmentation/</loc><lastmod>2023-08-25T11:44:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -9,8 +9,8 @@
 <meta property="og:description" content="Methods for 3D reconstruction from posed frames require prior knowledge about the scene metric range, usually to recover matching cues along the epipolar lines and narrow the search range. However, such prior might not be directly available or estimated inaccurately in real scenarios – e.g., outdoor 3D reconstruction from video sequences – therefore heavily hampering performance. In this paper, we focus on multi-view depth estimation without requiring prior knowledge about the metric range of the scene by proposing an efficient and purely 2D framework that reverses the depth estimation and matching steps order. Moreover, we demonstrate the capability of our framework to provide rich insights about the quality of the views used for prediction. We achieve state-of-the-art performance on Blended and TartanAir, two challenging benchmarks featuring posed video frames in various scenarios, and demonstrate generalization capabilities and stereo perception applicability on UnrealStereo4K. Finally, we show that our framework is accurate in controlled environments with fixed depth ranges, such as those featured in the DTU dataset." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/" /><meta property="article:section" content="projects" />
-<meta property="article:published_time" content="2023-11-28T17:32:00+02:00" />
-<meta property="article:modified_time" content="2023-11-28T17:32:00+02:00" />
+<meta property="article:published_time" content="2024-03-18T17:32:00+02:00" />
+<meta property="article:modified_time" content="2024-03-18T17:32:00+02:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Range-Agnostic Multi-View Depth Estimation With Keyframe Selection"/>
@@ -18,7 +18,7 @@
 <meta name="application-name" content="Andrea Conti PhD">
 <meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/" /><link rel="prev" href="https://andreaconti.github.io/projects/active_stereo_without_pattern_projector/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/" /><link rel="prev" href="https://andreaconti.github.io/projects/revisiting_depth_completion_from_stereo_matching/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -28,7 +28,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/projects\/range_agnostic_multi_view_depth\/"
         },"genre": "projects","keywords": "multi-view, depth-completion, deep-learning, computer-vision, 3dv","wordcount":  474 ,
-        "url": "https:\/\/andreaconti.github.io\/projects\/range_agnostic_multi_view_depth\/","datePublished": "2023-11-28T17:32:00+02:00","dateModified": "2023-11-28T17:32:00+02:00","publisher": {
+        "url": "https:\/\/andreaconti.github.io\/projects\/range_agnostic_multi_view_depth\/","datePublished": "2024-03-18T17:32:00+02:00","dateModified": "2024-03-18T17:32:00+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
                 "@type": "Person",
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX" style="text-align: center; font-size: 200%;">Range-Agnostic Multi-View Depth Estimation With Keyframe Selection</h1><div style="display: none;" class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-11-28">2023-11-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;474 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-18">2024-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;474 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -223,7 +223,7 @@ Moreover, at each iteration we use a different source view to exploit multi-view
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-11-28</span>
+                <span>Updated on 2024-03-18</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -242,7 +242,7 @@ Moreover, at each iteration we use a different source view to exploit multi-view
         </section>
     </div>
 
-    <div class="post-nav"><a href="/projects/active_stereo_without_pattern_projector/" class="prev" rel="prev" title="Active Stereo Without Pattern Projector"><i class="fas fa-angle-left fa-fw"></i>Active Stereo Without Pattern Projector</a></div>
+    <div class="post-nav"><a href="/projects/revisiting_depth_completion_from_stereo_matching/" class="prev" rel="prev" title="Revisiting Depth Completion from a Stereo Matching Perspective for Cross-Domain Generalization"><i class="fas fa-angle-left fa-fw"></i>Revisiting Depth Completion from a Stereo Matching Perspective for Cross-Domain Generalization</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

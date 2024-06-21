@@ -4,14 +4,21 @@
         <link>https://andreaconti.github.io/tags/computer-vision/</link>
         <description>computer-vision - Tag - Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Tue, 28 Nov 2023 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/computer-vision/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/computer-vision/" rel="self" type="application/rss+xml" /><item>
     <title>Range-Agnostic Multi-View Depth Estimation With Keyframe Selection</title>
     <link>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</link>
-    <pubDate>Tue, 28 Nov 2023 17:32:00 &#43;0200</pubDate>
+    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</guid>
     <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Valerio Cambareri &middot Stefano Mattoccia [Paper] [Code] [Demo] Overview Multi-View 3D reconstruction techniques process a set of source views and a reference view to yield an estimated depth map for the latter. Unluckily, state-of-the-art frameworks
 require to know a priori the depth range of the scene, in order to sample a set of depth hypotheses and build a meaningful cost volume. do not take into account the keyframes selection.]]></description>
+</item><item>
+    <title>Revisiting Depth Completion from a Stereo Matching Perspective for Cross-Domain Generalization</title>
+    <link>https://andreaconti.github.io/projects/revisiting_depth_completion_from_stereo_matching/</link>
+    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/projects/revisiting_depth_completion_from_stereo_matching/</guid>
+    <description><![CDATA[This paper proposes a new framework for depth completion robust against domain-shifting issues. It exploits the generalization capability of modern stereo networks to face depth completion, by processing fictitious stereo pairs obtained through a virtual pattern projection paradigm. Any stereo network or traditional stereo matcher can be seamlessly plugged into our framework, allowing for the deployment of a virtual stereo setup that is future-proof against advancement in the stereo field. Exhaustive experiments on cross-domain generalization support our claims. Hence, we argue that our framework can help depth completion to reach new deployment scenarios]]></description>
 </item><item>
     <title>Active Stereo Without Pattern Projector</title>
     <link>https://andreaconti.github.io/projects/active_stereo_without_pattern_projector/</link>

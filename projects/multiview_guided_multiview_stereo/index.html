@@ -8,9 +8,10 @@
         <title>Multi-View Guided Multi-View Stereo - Andrea Conti PhD</title><meta name="Description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below."><meta property="og:title" content="Multi-View Guided Multi-View Stereo" />
 <meta property="og:description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" />
+<meta property="og:url" content="https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2022-10-28T17:32:00+02:00" />
 <meta property="article:modified_time" content="2022-10-28T17:32:00+02:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Multi-View Guided Multi-View Stereo"/>
 <meta name="twitter:description" content="This paper introduces a novel deep framework for dense 3D reconstruction from multiple image frames, leveraging a sparse set of depth measurements gathered jointly with image acquisition as showed in the image below."/>
@@ -26,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/projects\/multiview_guided_multiview_stereo\/"
-        },"genre": "projects","keywords": "multi-view-stereo, deep-learning, computer-vision, iros","wordcount":  447 ,
+        },"genre": "projects","keywords": "multi-view-stereo, deep-learning, computer-vision, iros","wordcount":  283 ,
         "url": "https:\/\/andreaconti.github.io\/projects\/multiview_guided_multiview_stereo\/","datePublished": "2022-10-28T17:32:00+02:00","dateModified": "2022-10-28T17:32:00+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
@@ -43,7 +44,7 @@
             <a href="/" title="Andrea Conti PhD">Andrea Conti</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw"></i>
@@ -86,7 +87,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -101,7 +102,11 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><div class="details toc" id="toc-static"  kept="">
+        </div><article class="page single"><h1 class="single-title animated flipInX" style="text-align: center; font-size: 200%;">Multi-View Guided Multi-View Stereo</h1><div style="display: none;" class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-28">2022-10-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;283 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -116,7 +121,6 @@
             </div><div class="content" id="content"><!-- raw HTML omitted -->
 
 
-<h1 style="text-align: center;">Multi-View Guided Multi-View Stereo</h1>
 <p style="text-align: center;">
     <a href="https://mattpoggi.github.io" target="_blank">Matteo Poggi</a>*
     &middot 
@@ -142,10 +146,17 @@
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -155,35 +166,34 @@
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
-    <figure>
-    <img src="images/114-rgb.jpg"
-         alt="RGB image" width="600px"/> <figcaption>
-            <p>RGB image</p>
-        </figcaption>
-</figure>
+    <div class="imggrid-row">
+    <figure><img src="images/114-rgb.jpg"
+             alt="RGB image" width="600px"/><figcaption>
+                <p>RGB image</p>
+            </figcaption>
+    </figure>
 
-    <figure>
-    <img src="images/114-hints.png"
-         alt="Dilated sparse depth hints" width="600px"/> <figcaption>
-            <p>Dilated sparse depth hints</p>
-        </figcaption>
-</figure>
+    <figure><img src="images/114-hints.png"
+             alt="Dilated sparse depth hints" width="600px"/><figcaption>
+                <p>Dilated sparse depth hints</p>
+            </figcaption>
+    </figure>
 
-    <figure>
-    <img src="images/114-d2hc.jpg"
-         alt="Prediction without hints" width="600px"/> <figcaption>
-            <p>Prediction without hints</p>
-        </figcaption>
-</figure>
+    <figure><img src="images/114-d2hc.jpg"
+             alt="Prediction without hints" width="600px"/><figcaption>
+                <p>Prediction without hints</p>
+            </figcaption>
+    </figure>
 
-    <figure>
-    <img src="images/114-d2hc-fmvg.png"
-         alt="Prediction with hints" width="600px"/> <figcaption>
-            <p>Prediction with hints</p>
-        </figcaption>
-</figure>
+    <figure><img src="images/114-d2hc-fmvg.png"
+             alt="Prediction with hints" width="600px"/><figcaption>
+                <p>Prediction with hints</p>
+            </figcaption>
+    </figure>
 
 </div>
     
@@ -203,10 +213,17 @@
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -216,18 +233,19 @@
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
-<figure>
-    <img src="images/aggregation_points.png"
-         alt="(a)" width="650px"/> <figcaption>
+    <div class="imggrid-row">
+<figure><img src="images/aggregation_points.png"
+         alt="(a)" width="650px"/><figcaption>
             <p>(a)</p>
         </figcaption>
 </figure>
 
-<figure>
-    <img src="images/hints_filtering.png"
-         alt="(b)" width="400px"/> <figcaption>
+<figure><img src="images/hints_filtering.png"
+         alt="(b)" width="400px"/><figcaption>
             <p>(b)</p>
         </figcaption>
 </figure>
@@ -239,7 +257,7 @@
 </div>
 <p>Given a deep multi-view stereo network, our framework uses such sparse depth hints to guide the neural network by <strong>modulating the plane-sweep cost volume</strong> built during the forward step. Such modulation happens following</p>
 <p>$$
-\mathcal{V}'_s(z_s) = \left[ 1 - v_s + v_s \cdot k \cdot \left( 1 - e^-\frac{z_s - z_s^*}{2c^2} \right) \right]
+\mathcal{V}&rsquo;_s(z_s) = \left[ 1 - v_s + v_s \cdot k \cdot \left( 1 - e^-\frac{z_s - z_s^*}{2c^2} \right) \right]
 $$</p>
 <p>with $v_s$ and $z_s^*$ being respectively the binary mask $v$ and the depth hints map $z^*$ downsampled to resolution $s$ with nearest-neighbor interpolation. For further details we refer to the <a href="https://arxiv.org/pdf/2210.11467v1.pdf" target="_blank" rel="noopener noreffer">main paper</a>.</p>
 <h2 id="qualitative-results">Qualitative Results</h2>
@@ -254,10 +272,17 @@ $$</p>
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -267,22 +292,21 @@ $$</p>
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
-<figure>
-    <img src="images/qualitative_samples_dtu/2_img.jpg" width="600px"/> 
+    <div class="imggrid-row">
+<figure><img src="images/qualitative_samples_dtu/2_img.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/2_pred_no_hints.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/2_pred_no_hints.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/2_pred_hints.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/2_pred_hints.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/2_gt.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/2_gt.jpg" width="600px"/>
 </figure>
 
 </div>
@@ -299,10 +323,17 @@ $$</p>
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -312,22 +343,21 @@ $$</p>
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
-<figure>
-    <img src="images/qualitative_samples_dtu/50_img.jpg" width="600px"/> 
+    <div class="imggrid-row">
+<figure><img src="images/qualitative_samples_dtu/50_img.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/50_pred_no_hints.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/50_pred_no_hints.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/50_pred_hints.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/50_pred_hints.jpg" width="600px"/>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_dtu/50_gt.jpg" width="600px"/> 
+<figure><img src="images/qualitative_samples_dtu/50_gt.jpg" width="600px"/>
 </figure>
 
 </div>
@@ -344,10 +374,17 @@ $$</p>
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -357,32 +394,31 @@ $$</p>
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
-<figure>
-    <img src="images/qualitative_samples_blended/1_img.jpg"
-         alt="RGB" width="600px"/> <figcaption>
+    <div class="imggrid-row">
+<figure><img src="images/qualitative_samples_blended/1_img.jpg"
+         alt="RGB" width="600px"/><figcaption>
             <p>RGB</p>
         </figcaption>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_blended/1_pred_no_hints.jpg"
-         alt="w/o Hints" width="600px"/> <figcaption>
+<figure><img src="images/qualitative_samples_blended/1_pred_no_hints.jpg"
+         alt="w/o Hints" width="600px"/><figcaption>
             <p>w/o Hints</p>
         </figcaption>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_blended/1_pred_hints.jpg"
-         alt="with Hints" width="600px"/> <figcaption>
+<figure><img src="images/qualitative_samples_blended/1_pred_hints.jpg"
+         alt="with Hints" width="600px"/><figcaption>
             <p>with Hints</p>
         </figcaption>
 </figure>
 
-<figure>
-    <img src="images/qualitative_samples_blended/1_gt.jpg"
-         alt="Ground Truth" width="600px"/> <figcaption>
+<figure><img src="images/qualitative_samples_blended/1_gt.jpg"
+         alt="Ground Truth" width="600px"/><figcaption>
             <p>Ground Truth</p>
         </figcaption>
 </figure>
@@ -393,14 +429,14 @@ $$</p>
     
 </div>
 <h2 id="reference">Reference</h2>
-<div class="highlight"><pre class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Poggi_2022_IROS</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">{Multi-View Guided Multi-View Stereo}</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">{Poggi, Matteo and Conti, Andrea and Mattoccia, Stefano}</span><span class="p">,</span>
-  <span class="na">booktitle</span><span class="p">=</span><span class="s">{IEEE/RSJ International Conference on Intelligent Robots and Systems}</span><span class="p">,</span>
-  <span class="na">note</span><span class="p">=</span><span class="s">{IROS}</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">{2022}</span>
-<span class="p">}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Poggi_2022_IROS</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span><span class="p">=</span><span class="s">{Multi-View Guided Multi-View Stereo}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span><span class="p">=</span><span class="s">{Poggi, Matteo and Conti, Andrea and Mattoccia, Stefano}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">booktitle</span><span class="p">=</span><span class="s">{IEEE/RSJ International Conference on Intelligent Robots and Systems}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">note</span><span class="p">=</span><span class="s">{IROS}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span><span class="p">=</span><span class="s">{2022}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -430,7 +466,7 @@ $$</p>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
         </div>
     </footer></div>
 

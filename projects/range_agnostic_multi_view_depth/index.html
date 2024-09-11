@@ -165,10 +165,17 @@ Moreover, at each iteration we use a different source view to exploit multi-view
        font-size: smaller;
     }
 
-    .imggrid {
+    .imggrid-row {
         margin: 0px 0px;
         display: flex;
         justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .caption {
@@ -178,8 +185,11 @@ Moreover, at each iteration we use a different source view to exploit multi-view
     }
 </style>
 
+
+
+
 <div class="imggridbox">
-    <div class="imggrid">
+    <div class="imggrid-row">
 <figure><img src="static/model.png" width="800px"/>
 </figure>
 

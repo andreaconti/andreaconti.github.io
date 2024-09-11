@@ -10,8 +10,10 @@
     <pubDate>Fri, 28 Oct 2022 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</guid>
-    <description><![CDATA[Multi-View Guided Multi-View Stereo Matteo Poggi* &middot Andrea Conti* &middot Stefano Mattoccia *joint authorship [code] [paper] [demo]   .imggridbox { margin: 0px 0px; text-align: center; font-weight: lighter; font-size: smaller; } .imggrid { margin: 0px 0px; display: flex; justify-content: center; } .caption { text-align: justify; font-weight: bolder; margin: 0px auto; }    RGB image
-    Dilated sparse depth hints
-    Prediction without hints]]></description>
+    <description><![CDATA[Matteo Poggi* &middot Andrea Conti* &middot Stefano Mattoccia *joint authorship [code] [paper] [demo] RGB image
+Dilated sparse depth hints
+Prediction without hints
+Prediction with hints
+Multi-View Guided Multi-View Stereo. Deep MVS network struggle at generalizing from synthetic to real images, yielding inaccurate depth maps and poor 3D reconstruction. By guiding the network with a aset of sparse depth measurements, aggregated over the multiple views, we can greatly ameliorate the results.]]></description>
 </item></channel>
 </rss>

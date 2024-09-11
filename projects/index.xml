@@ -42,6 +42,17 @@ require to know a priori the depth range of the scene, in order to sample a set 
     <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Stefano Mattoccia [Paper] [Code] Overview State-of-the-art Depth Completion approaches yield accurate results only when processing a specific density and distribution of input points, i.e. the one observed during training, narrowing their deployment in real use cases. We present a framework:
 robust to uneven distributions and extremely low densities by structure trained with a fixed pattern and density as competitors, without any need of augmenting Experimental results on standard indoor and outdoor benchmarks highlight the robustness of our framework, achieving accuracy comparable to state-of-the-art methods when tested with density and distribution equal to the training one while being much more accurate in the other cases.]]></description>
 </item><item>
+    <title>Multi-View Guided Multi-View Stereo</title>
+    <link>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</link>
+    <pubDate>Fri, 28 Oct 2022 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/projects/multiview_guided_multiview_stereo/</guid>
+    <description><![CDATA[Matteo Poggi* &middot Andrea Conti* &middot Stefano Mattoccia *joint authorship [code] [paper] [demo] RGB image
+Dilated sparse depth hints
+Prediction without hints
+Prediction with hints
+Multi-View Guided Multi-View Stereo. Deep MVS network struggle at generalizing from synthetic to real images, yielding inaccurate depth maps and poor 3D reconstruction. By guiding the network with a aset of sparse depth measurements, aggregated over the multiple views, we can greatly ameliorate the results.]]></description>
+</item><item>
     <title>Unsupervised Confidence for LiDAR Depth Maps and Applications</title>
     <link>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</link>
     <pubDate>Wed, 12 Oct 2022 17:32:00 &#43;0200</pubDate>

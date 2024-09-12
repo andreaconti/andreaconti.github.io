@@ -4,33 +4,54 @@
         <link>https://andreaconti.github.io/tags/</link>
         <description>Tags - Tag - Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>3dv</title>
-    <link>https://andreaconti.github.io/tags/3dv/</link>
-    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://andreaconti.github.io/tags/3dv/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>computer-vision</title>
     <link>https://andreaconti.github.io/tags/computer-vision/</link>
-    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/tags/computer-vision/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>deep-learning</title>
     <link>https://andreaconti.github.io/tags/deep-learning/</link>
-    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/tags/deep-learning/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>depth-completion</title>
     <link>https://andreaconti.github.io/tags/depth-completion/</link>
-    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/tags/depth-completion/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>multi-view-stereo</title>
+    <link>https://andreaconti.github.io/tags/multi-view-stereo/</link>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/tags/multi-view-stereo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>tof</title>
+    <link>https://andreaconti.github.io/tags/tof/</link>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/tags/tof/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>wacv</title>
+    <link>https://andreaconti.github.io/tags/wacv/</link>
+    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/tags/wacv/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>3dv</title>
+    <link>https://andreaconti.github.io/tags/3dv/</link>
+    <pubDate>Mon, 18 Mar 2024 17:32:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://andreaconti.github.io/tags/3dv/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>multi-view</title>
@@ -52,27 +73,6 @@
     <pubDate>Fri, 25 Aug 2023 11:44:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/tags/ieee-access/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>wacv</title>
-    <link>https://andreaconti.github.io/tags/wacv/</link>
-    <pubDate>Tue, 03 Jan 2023 17:32:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://andreaconti.github.io/tags/wacv/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>iros</title>
-    <link>https://andreaconti.github.io/tags/iros/</link>
-    <pubDate>Fri, 28 Oct 2022 17:32:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://andreaconti.github.io/tags/iros/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>multi-view-stereo</title>
-    <link>https://andreaconti.github.io/tags/multi-view-stereo/</link>
-    <pubDate>Fri, 28 Oct 2022 17:32:00 &#43;0200</pubDate>
-    <author>Author</author>
-    <guid>https://andreaconti.github.io/tags/multi-view-stereo/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor - Andrea Conti PhD</title><meta name="Description" content="High frame rate and accurate depth estimation plays an important role in several tasks crucial to robotics and automotive perception. To date, this can be achieved through ToF and LiDAR devices for indoor and outdoor applications, respectively. However, their applicability is limited by low frame rate, energy consumption, and spatial sparsity. Depth on Demand (DoD) allows for accurate temporal and spatial depth densification achieved by exploiting a high frame rate RGB sensor coupled with a potentially lower frame rate and sparse active depth sensor. Our proposal jointly enables lower energy consumption and denser shape reconstruction, by significantly reducing the streaming requirements on the depth sensor thanks to its three core stages: i) multi-modal encoding, ii) iterative multi-modal integration, and iii) depth decoding. We present extended evidence assessing the effectiveness of DoD on indoor and outdoor video datasets, covering both environment scanning and automotive perception use cases."><meta property="og:title" content="Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor" />
+<meta property="og:description" content="High frame rate and accurate depth estimation plays an important role in several tasks crucial to robotics and automotive perception. To date, this can be achieved through ToF and LiDAR devices for indoor and outdoor applications, respectively. However, their applicability is limited by low frame rate, energy consumption, and spatial sparsity. Depth on Demand (DoD) allows for accurate temporal and spatial depth densification achieved by exploiting a high frame rate RGB sensor coupled with a potentially lower frame rate and sparse active depth sensor. Our proposal jointly enables lower energy consumption and denser shape reconstruction, by significantly reducing the streaming requirements on the depth sensor thanks to its three core stages: i) multi-modal encoding, ii) iterative multi-modal integration, and iii) depth decoding. We present extended evidence assessing the effectiveness of DoD on indoor and outdoor video datasets, covering both environment scanning and automotive perception use cases." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://andreaconti.github.io/projects/depth_on_demand/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2024-07-07T17:32:00+02:00" />
+<meta property="article:modified_time" content="2024-07-07T17:32:00+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor"/>
+<meta name="twitter:description" content="High frame rate and accurate depth estimation plays an important role in several tasks crucial to robotics and automotive perception. To date, this can be achieved through ToF and LiDAR devices for indoor and outdoor applications, respectively. However, their applicability is limited by low frame rate, energy consumption, and spatial sparsity. Depth on Demand (DoD) allows for accurate temporal and spatial depth densification achieved by exploiting a high frame rate RGB sensor coupled with a potentially lower frame rate and sparse active depth sensor. Our proposal jointly enables lower energy consumption and denser shape reconstruction, by significantly reducing the streaming requirements on the depth sensor thanks to its three core stages: i) multi-modal encoding, ii) iterative multi-modal integration, and iii) depth decoding. We present extended evidence assessing the effectiveness of DoD on indoor and outdoor video datasets, covering both environment scanning and automotive perception use cases."/>
+<meta name="application-name" content="Andrea Conti PhD">
+<meta name="apple-mobile-web-app-title" content="Andrea Conti PhD"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://andreaconti.github.io/projects/depth_on_demand/" /><link rel="prev" href="https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/andreaconti.github.io\/projects\/depth_on_demand\/"
+        },"genre": "projects","keywords": "multi-view-stereo, depth-completion, tof, deep-learning, computer-vision, wacv","wordcount":  1001 ,
+        "url": "https:\/\/andreaconti.github.io\/projects\/depth_on_demand\/","datePublished": "2024-07-07T17:32:00+02:00","dateModified": "2024-07-07T17:32:00+02:00","publisher": {
+            "@type": "Organization",
+            "name": "Andrea Conti"},"author": {
+                "@type": "Person",
+                "name": "Andrea Conti"
+            },"description": "High frame rate and accurate depth estimation plays an important role in several tasks crucial to robotics and automotive perception. To date, this can be achieved through ToF and LiDAR devices for indoor and outdoor applications, respectively. However, their applicability is limited by low frame rate, energy consumption, and spatial sparsity. Depth on Demand (DoD) allows for accurate temporal and spatial depth densification achieved by exploiting a high frame rate RGB sensor coupled with a potentially lower frame rate and sparse active depth sensor. Our proposal jointly enables lower energy consumption and denser shape reconstruction, by significantly reducing the streaming requirements on the depth sensor thanks to its three core stages: i) multi-modal encoding, ii) iterative multi-modal integration, and iii) depth decoding. We present extended evidence assessing the effectiveness of DoD on indoor and outdoor video datasets, covering both environment scanning and automotive perception use cases."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Andrea Conti PhD">Andrea Conti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Andrea Conti PhD">Andrea Conti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX" style="text-align: center; font-size: 200%;">Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor</h1><div style="display: none;" class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-07">2024-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1001 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#method">Method</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#qualitatives">Qualitatives</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- raw HTML omitted -->
+
+
+<p style="text-align: center;">
+    <a href="https://andreaconti.github.io" target="_blank">Andrea Conti</a>
+    &middot 
+    <a href="https://mattpoggi.github.io" target="_blank">Matteo Poggi</a>
+    &middot
+    <a href="https://scholar.google.com/citations?user=yYHJGZUAAAAJ" target="_blank">Valerio Cambareri</a>
+    &middot
+    <a href="http://www.vision.deis.unibo.it/~smatt/Site/Home.html" target="_blank">Stefano Mattoccia</a>
+</p>
+<p style="text-align: center">
+    <a href="" target="_blank">[Paper]</a>
+    <a href="https://github.com/andreaconti/depth-on-demand" target="_blank">[Code]</a>
+</p>
+
+<h2 id="overview">Overview</h2>
+<p>In the last decade, RGB-D camera systems have become prominent in robotics, automotive and augmented reality. Moreover, they are now available on mobile handheld devices, usually coupled with RGB cameras. However, such sensors either do not provide high frame rate, high resulution or suffer heating and high energy consumption, particularly meaningful in the mobile use case. These limitations prevent coupling them with odiern cheap high resolution and fast RGB cameras.</p>
+<p>We propose <strong>Depth on Demand</strong> (<em>DoD</em>), a framework addressing the three major issues related to active depth sensors in streaming dense depth maps: <em>spatial sparsity</em>, <em>limited frame rate</em> and <em>energy consumption</em> of the depth sensors.</p>
+<blockquote>
+<p><em>DoD</em> allows to stream high resolution depth from an RGB camera and a depth sensor without requiring the depth sensor neither to be dense or to match the frame-rate of the RGB camera.</p>
+</blockquote>
+<p>In Fig. A is showed an example of indoor reconstruction with <em>DoD</em> where only the red frames provide sparse depth information while the reconstruction exploits the whole RGB video stream executed at a much higher frame rate.</p>
+
+
+
+<style>
+    .imggridbox {
+       margin: 0px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid-row {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+</style>
+
+
+
+
+<div class="imggridbox">
+    <div class="imggrid-row">
+<figure><img src="images/setup_example.png" width="800px"/>
+</figure>
+
+</div>
+    
+        <div class="caption"><b>Figure A: Indoor Reconstruction.</b> Top view of indoor reconstruction with DoD on ScanNetV2 where red frames provide depth information while other frames are RGB-only</div>
+    
+</div>
+<h2 id="method">Method</h2>
+
+
+
+<style>
+    .imggridbox {
+       margin: 0px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid-row {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+</style>
+
+
+
+
+<div class="imggridbox">
+    <div class="imggrid-row">
+<figure><img src="images/model_structure.png" width="800px"/>
+</figure>
+
+</div>
+    
+        <div class="caption"><b>Figure B: Depth on Demand Framework.</b> DoD embeds multi-view cues and monocular features in the Visual Cues Integration, then integrates sparse depth updates in the Depth Cues Integration. To properly exploit both these information these stages are applied iteratively in the form of depth updates.</div>
+    
+</div>
+<p>Depth on Demand aims to improve the temporal resolution of an active depth sensor by utilizing the higher frame rate of an RGB camera. It estimates depth for each RGB frame, even for those that do not have direct depth sensor measurements. This is achieved through multi-view geometry on the RGB video stream, combining both frames with and without depth data. The method is structured in three main steps: <strong>multi-modal encoding</strong>, <strong>iterative multi-modal integration</strong>, and <strong>depth decoding</strong>.</p>
+<h4 id="multi-modal-encoding">Multi-modal encoding</h4>
+<p>Depth on Demand processes input data from three different sources: multi-view geometry, monocular cues, and sparse depth measurements. Features from target and source views are extracted using a ResNet18-based encoder, allowing the computation of epipolar correlation features from pixel matches between views. Additionally, monocular information is encoded separately using a ResNet34 to fill in gaps where geometric cues are missing, particularly in cases of motion or large pose changes. Sparse depth data from a previous time is projected onto the current view, providing a coarse initial depth map for further refinement.</p>
+<h4 id="iterative-multi-modal-integration">Iterative multi-modal integration</h4>
+<p>Depth on Demand combines the encoded features iteratively to refine the depth map over a fixed number of iterations. The first stage, <strong>visual cues integration</strong>, merges monocular and geometric information using a Gated Recurrent Unit (GRU). The second stage, <strong>depth cues integration</strong>, adjusts depth using the sparse depth data, correcting predictions where necessary. This iterative process improves depth accuracy and manages outliers, such as occlusions or moving objects. These stages are represented in Fig. B.</p>
+<h4 id="depth-decoding">Depth decoding</h4>
+<p>FInally, Depth on Demand takes the refined depth map and upscales it to the original resolution using a learned upsampling technique inspired by convex upsampling. The method applies this upsampling iteratively to refine depth maps, balancing efficiency with accuracy by embedding monocular cues and maintaining smooth depth transitions. This final step enables efficient depth prediction with improved spatial resolution.</p>
+<h2 id="qualitatives">Qualitatives</h2>
+<p>Depth on Demand is thoroughly evaluated in many different scenarios. In Fig. C are showed dynamic on-line mesh reconstructions on ScanNetV2 to represent the indoor use case.</p>
+
+
+
+<style>
+    .imggridbox {
+       margin: 0px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid-row {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+</style>
+
+
+
+
+<div class="imggridbox">
+    <div class="imggrid-row">
+<video width="100%" autoplay loop>
+    <source src="videos/scannetv2/scene0707_00.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+<video width="100%" autoplay loop>
+    <source src="videos/scannetv2/scene0721_00.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+</div>
+    
+        <div class="caption"><b>Figure C: ScanNetV2 Qualitatives.</b> Depth on Demand shines at 3D reconstruction in indoor scenarios like the ones provided by ScanNetV2</div>
+    
+</div>
+<p>Indoor reconstruction is on its own an interesting task. Nonetheless, Depth on Demand can be applied in many other different contexts like outdoor scenes. In Fig. D is showed depth predictions on the TartanAir dataset. Below, can be clearly noticed how the projected sparse points do not cover the whole target field of view due to the low frame rate ratio. Moreover, moving objects and occlusions generate outliers in the projected depth. Nonetheless, Depth on Demand is able to deal with all these issues providing a smooth reconstruction.</p>
+
+
+
+<style>
+    .imggridbox {
+       margin: 0px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid-row {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+</style>
+
+
+
+    
+
+
+<div class="imggridbox">
+    <div class="imggrid-col">
+<video width="100%" autoplay loop>
+    <source src="videos/tartanair/carwelding-Easy-P007.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+<video width="100%" autoplay loop>
+    <source src="videos/tartanair/ocean-Hard-P009.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+</div>
+    
+        <div class="caption"><b>Figure D: TartanAir Qualitatives.</b> Depth on Demand allows reconstruction from drone-like views like the ones provided by the TartanAir dataset. From left to right, the source view aligned with the sparse depth sensor at a lower frame rate, the target view with projected sparse points from the latest source frame, the prediction and the ground-truth.</div>
+    
+</div>
+<p>Finally, we show qualitative results on the KITTI dataset to demonstate applicability also to the automotive use case. This scenario is quite different from the previous ones since a LiDAR 360° sensor is usually used. Thus, the gap between the last depth frame and the target view doesn&rsquo;t lead to large areas empty of sparse depth but instead to scan lines sparsification. This can be seen in Fig. E.</p>
+
+
+
+<style>
+    .imggridbox {
+       margin: 0px 0px;
+       text-align: center;
+       font-weight: lighter;
+       font-size: smaller;
+    }
+
+    .imggrid-row {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imggrid-col {
+        margin: 0px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .caption {
+        text-align: justify;
+        font-weight: bolder;
+        margin: 0px auto;
+    }
+</style>
+
+
+
+    
+
+
+<div class="imggridbox">
+    <div class="imggrid-col">
+<figure><img src="images/kitti_setup_example.png"/>
+</figure>
+
+<video width="100%" autoplay loop>
+    <source src="videos/kitti/2011_09_26_drive_0005_sync.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+<video width="100%" autoplay loop>
+    <source src="videos/kitti/2011_09_26_drive_0023_sync.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+<video width="100%" autoplay loop>
+    <source src="videos/kitti/2011_09_26_drive_0113_sync.mp4" type="video/mp4">
+    Your browser does not support video tag
+</video>
+
+</div>
+    
+        <div class="caption"><b>Figure E: KITTI Qualitatives.</b> On top, an example of a 360° LiDAR caption and of the target RGB view on which DoD predicts depth. Due to the gap between the two the scanlines used as input to the framework will be sparsier but the field of view almost completely covered. On the bottom a set of video samples, from left to right: the source view, the target view with projected sparse depth, the prediction and finally the ground-truth.</div>
+    
+</div>
+<h2 id="reference">Reference</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@InProceedings</span><span class="p">{</span><span class="nl">Conti_2024_ECCV</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="na">author</span>    <span class="p">=</span> <span class="s">{Conti, Andrea and Poggi, Matteo and Cambareri, Valerio and Mattoccia, Stefano}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="na">title</span>     <span class="p">=</span> <span class="s">{Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{European Conference on Computer Vision (ECCV)}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="na">month</span>     <span class="p">=</span> <span class="s">{October}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="na">year</span>      <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">}</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-07-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/multi-view-stereo/">multi-view-stereo</a>,&nbsp;<a href="/tags/depth-completion/">depth-completion</a>,&nbsp;<a href="/tags/tof/">tof</a>,&nbsp;<a href="/tags/deep-learning/">deep-learning</a>,&nbsp;<a href="/tags/computer-vision/">computer-vision</a>,&nbsp;<a href="/tags/wacv/">wacv</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/projects/range_agnostic_multi_view_depth/" class="prev" rel="prev" title="Range-Agnostic Multi-View Depth Estimation With Keyframe Selection"><i class="fas fa-angle-left fa-fw"></i>Range-Agnostic Multi-View Depth Estimation With Keyframe Selection</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Andrea Conti</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="https://%3cnil%3e.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":null,"maxResultLength":null,"noResultsFound":"No results found","snippetLength":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -4,10 +4,10 @@
         <link>https://andreaconti.github.io/tags/deep-learning/</link>
         <description>deep-learning - Tag - Andrea Conti PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>andrea.conti@tutanota.com (Andrea Conti)</managingEditor>
-            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/deep-learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>andrea.conti@tutanota.com (Andrea Conti)</webMaster><lastBuildDate>Thu, 12 Sep 2024 13:32:00 &#43;0200</lastBuildDate><atom:link href="https://andreaconti.github.io/tags/deep-learning/" rel="self" type="application/rss+xml" /><item>
     <title>Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor</title>
     <link>https://andreaconti.github.io/projects/depth_on_demand/</link>
-    <pubDate>Sun, 07 Jul 2024 17:32:00 &#43;0200</pubDate>
+    <pubDate>Thu, 12 Sep 2024 13:32:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://andreaconti.github.io/projects/depth_on_demand/</guid>
     <description><![CDATA[Andrea Conti &middot Matteo Poggi &middot Valerio Cambareri &middot Stefano Mattoccia [Paper] [Code] Overview In the last decade, RGB-D camera systems have become prominent in robotics, automotive and augmented reality. Moreover, they are now available on mobile handheld devices, usually coupled with RGB cameras. However, such sensors either do not provide high frame rate, high resulution or suffer heating and high energy consumption, particularly meaningful in the mobile use case.]]></description>

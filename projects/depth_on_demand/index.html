@@ -9,8 +9,8 @@
 <meta property="og:description" content="High frame rate and accurate depth estimation plays an important role in several tasks crucial to robotics and automotive perception. To date, this can be achieved through ToF and LiDAR devices for indoor and outdoor applications, respectively. However, their applicability is limited by low frame rate, energy consumption, and spatial sparsity. Depth on Demand (DoD) allows for accurate temporal and spatial depth densification achieved by exploiting a high frame rate RGB sensor coupled with a potentially lower frame rate and sparse active depth sensor. Our proposal jointly enables lower energy consumption and denser shape reconstruction, by significantly reducing the streaming requirements on the depth sensor thanks to its three core stages: i) multi-modal encoding, ii) iterative multi-modal integration, and iii) depth decoding. We present extended evidence assessing the effectiveness of DoD on indoor and outdoor video datasets, covering both environment scanning and automotive perception use cases." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://andreaconti.github.io/projects/depth_on_demand/" /><meta property="article:section" content="projects" />
-<meta property="article:published_time" content="2024-07-07T17:32:00+02:00" />
-<meta property="article:modified_time" content="2024-07-07T17:32:00+02:00" />
+<meta property="article:published_time" content="2024-09-12T13:32:00+02:00" />
+<meta property="article:modified_time" content="2024-09-12T13:32:00+02:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor"/>
@@ -27,8 +27,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/andreaconti.github.io\/projects\/depth_on_demand\/"
-        },"genre": "projects","keywords": "multi-view-stereo, depth-completion, tof, deep-learning, computer-vision, wacv","wordcount":  1001 ,
-        "url": "https:\/\/andreaconti.github.io\/projects\/depth_on_demand\/","datePublished": "2024-07-07T17:32:00+02:00","dateModified": "2024-07-07T17:32:00+02:00","publisher": {
+        },"genre": "projects","keywords": "multi-view-stereo, depth-completion, tof, deep-learning, computer-vision, eccv","wordcount":  1001 ,
+        "url": "https:\/\/andreaconti.github.io\/projects\/depth_on_demand\/","datePublished": "2024-09-12T13:32:00+02:00","dateModified": "2024-09-12T13:32:00+02:00","publisher": {
             "@type": "Organization",
             "name": "Andrea Conti"},"author": {
                 "@type": "Person",
@@ -102,9 +102,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX" style="text-align: center; font-size: 200%;">Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor</h1><div style="display: none;" class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX" style="text-align: center; font-size: 200%;">Depth on Demand: Streaming Dense Depth from a Low Frame Rate Active Sensor</h1><h3 class="animated flipInX" style="text-align: center; opacity: 70%;">&#127881; The 18th European Conference on Computer Vision (ECCV 2024) &#127881;</h3><div style="display: none;" class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Andrea Conti</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-07">2024-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1001 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-09-12">2024-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1001 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -136,9 +136,10 @@
     <a href="http://www.vision.deis.unibo.it/~smatt/Site/Home.html" target="_blank">Stefano Mattoccia</a>
 </p>
 <p style="text-align: center">
-    <a href="" target="_blank">[Paper]</a>
+    <a href="https://arxiv.org/abs/2409.08277.pdf" target="_blank">[Paper]</a>
     <a href="https://github.com/andreaconti/depth-on-demand" target="_blank">[Code]</a>
 </p>
+
 
 <h2 id="overview">Overview</h2>
 <p>In the last decade, RGB-D camera systems have become prominent in robotics, automotive and augmented reality. Moreover, they are now available on mobile handheld devices, usually coupled with RGB cameras. However, such sensors either do not provide high frame rate, high resulution or suffer heating and high energy consumption, particularly meaningful in the mobile use case. These limitations prevent coupling them with odiern cheap high resolution and fast RGB cameras.</p>
@@ -281,12 +282,12 @@
 
 <div class="imggridbox">
     <div class="imggrid-row">
-<video width="100%" autoplay loop>
+<video width="50%" autoplay loop>
     <source src="videos/scannetv2/scene0707_00.mp4" type="video/mp4">
     Your browser does not support video tag
 </video>
 
-<video width="100%" autoplay loop>
+<video width="50%" autoplay loop>
     <source src="videos/scannetv2/scene0721_00.mp4" type="video/mp4">
     Your browser does not support video tag
 </video>
@@ -425,7 +426,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-07-07</span>
+                <span>Updated on 2024-09-12</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -438,7 +439,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/multi-view-stereo/">multi-view-stereo</a>,&nbsp;<a href="/tags/depth-completion/">depth-completion</a>,&nbsp;<a href="/tags/tof/">tof</a>,&nbsp;<a href="/tags/deep-learning/">deep-learning</a>,&nbsp;<a href="/tags/computer-vision/">computer-vision</a>,&nbsp;<a href="/tags/wacv/">wacv</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/multi-view-stereo/">multi-view-stereo</a>,&nbsp;<a href="/tags/depth-completion/">depth-completion</a>,&nbsp;<a href="/tags/tof/">tof</a>,&nbsp;<a href="/tags/deep-learning/">deep-learning</a>,&nbsp;<a href="/tags/computer-vision/">computer-vision</a>,&nbsp;<a href="/tags/eccv/">eccv</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>

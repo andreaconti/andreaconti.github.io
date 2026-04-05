@@ -2,16 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://andreaconti.github.io/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/computer-vision/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/deep-learning/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/projects/depth_on_demand/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/depth-completion/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/eccv/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/multi-view-stereo/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/projects/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://andreaconti.github.io/tags/tof/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://andreaconti.github.io/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/computer-vision/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/deep-learning/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/depth_on_demand/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/depth-completion/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/eccv/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/multi-view-stereo/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/projects/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/tags/tof/</loc><lastmod>2024-09-12T13:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/tags/3dv/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/tags/multi-view/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/projects/range_agnostic_multi_view_depth/</loc><lastmod>2024-03-18T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -30,4 +30,5 @@
             <loc>https://andreaconti.github.io/projects/unsupervised_confidence_for_lidar_depth_maps_and_applications/</loc><lastmod>2022-10-12T17:32:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/posts/2022/05/weighted-linear-regression/</loc><lastmod>2022-05-09T16:18:28&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://andreaconti.github.io/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://andreaconti.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://andreaconti.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://andreaconti.github.io/photography/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
